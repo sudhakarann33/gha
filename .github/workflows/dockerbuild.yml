@@ -23,15 +23,4 @@ jobs:
         run: echo "hello"
       - name: docker tag & push  
         run: docker tag fast_api:sudhakar sudhakarann33/ghatest:sudhakar && docker push sudhakarann33/ghatest:sudhakar
-        
-      - name: login Target Server
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: 40.71.56.99
-          username: dockerpoc
-          password: ${{ secrets.SERVERPASSWORD }}
-          port: 22
-          script: | 
-             sudo docker login -u ${{secrets.DOCKERHUBUSERNAME}} -p ${{secrets.DOCKERHUBPASSWORD}}
-             sudo docker pull shubhambawa98/testlkm:latest
-             sudo docker run -d -P shubhambawa98/testlkm:latest
+  
