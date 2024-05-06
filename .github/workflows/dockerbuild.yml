@@ -12,7 +12,7 @@ jobs:
     environment: Dev
     steps:
       - name: gitclone 
-        run: git clone https://github.com/Shubhambawa98/testenv.git
+        run: git clone https://github.com/sudhakarann33/gha.git
       - name: docker installation 
         run: curl -fsSL https://get.docker.com | sh 
       - name: docker login 
