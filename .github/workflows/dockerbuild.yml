@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 jobs:
-  Buildandpushdocker:
+  DockerBuild:
     runs-on: ubuntu-latest
     environment: Dev
     steps:
@@ -22,7 +22,7 @@ jobs:
       - name: test
         run: echo "hello"
       - name: docker tag & push  
-        run: docker tag fast_api:satyam shubhambawa98/testlkm:satyam && docker push shubhambawa98/testlkm:satyam
+        run: docker tag fast_api_test:satyam shubhambawa98/testlkm:satyam && docker push shubhambawa98/testlkm:satyam
         
       - name: login Target Server
         uses: appleboy/ssh-action@v0.1.10
