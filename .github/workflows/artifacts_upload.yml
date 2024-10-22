@@ -36,5 +36,5 @@ jobs:
 
       - name: Print
         run: |
-          curl -L -H "Accept: application/vnd.github+json" -H "Authorization: token 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" https://api.github.com/repos/sudhakarann33/gha/actions/artifacts
+          curl -H "Authorization: token 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" https://api.github.com/repos/sudhakarann33/gha/actions/artifacts
         shell: bash
