@@ -26,13 +26,15 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Upload a Build Artifact
+        id: upload_artifact
         uses: actions/upload-artifact@v4.4.3
         with:
-          # Artifact name
           name: artifact
-          # A file, directory or wildcard pattern that describes what to upload
           path: ${{ github.workspace }}/dockerfile 
-          # The desired behavior if no files are found using the provided path.
+
+      - name: Print artifact id
+        run: echo ${{ steps.upload_artifact.outputs.artifact_id }}
+        shell: bash
 
       - name: Print
         run: |
